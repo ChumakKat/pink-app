@@ -1,0 +1,238 @@
+/* TARIFFS */
+.tariffs {
+    position: relative;
+    background-color: $grayfon;
+    padding: 159px 0 97px;
+  
+    @include breakpoint ($desktop-bp-992) {
+        padding: 100px 0 70px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        overflow: auto;
+        padding-bottom: 100px;
+     }
+}
+
+.tariffs:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+    border-top: 100px solid $white;
+    border-right: 100vw solid transparent;
+    z-index: 0;
+
+    @include breakpoint ($desktop-bp-992) {
+        border-top: 50px solid $white;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        border-top: 35px solid $white;
+    }
+}
+
+.tariffs__section {
+    position: relative;
+    z-index: 1000;
+
+    @include breakpoint ($mobile-bp-660) {
+      display: none;
+    }
+}
+
+.tariffs__name {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2px;
+}
+
+.tariffs__name-item {
+    position: relative;
+    padding: 25px 0;
+    background-color: #283645;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+
+    &:first-child {
+        border-top-left-radius: 5px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 5px;
+    }
+   
+    @include breakpoint ($desktop-bp-992) {
+        padding: 20px 0;
+    }
+}
+
+
+.tariffs__name-item:nth-child(1) {
+    grid-column: 2 /3;
+}
+
+.tariffs__name-title {
+    font-weight: bold;
+    line-height: 1.66;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 16px;
+    }
+}
+
+.tariffs__name-price {
+    font-weight: 300;
+    font-size: 24px;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 18px;
+    }
+}
+
+.tariffs__name-hit {
+    font-size: 14px;
+}
+
+.tariffs__name-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @include breakpoint ($tablets-bp-768) {
+        width: 61px;
+        height: 61px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        width: 74px;
+        height: 74px;
+    }
+}
+
+.tariffs__name-hit {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    z-index: 2;
+    transform: rotate(-45deg);
+
+    @include breakpoint ($tablets-bp-768) {
+        top: 15px;
+        left: 13px;
+        font-size: 12px;
+    }
+    @include breakpoint ($mobile-bp-660) {
+        top: 18px;
+        left: 15px;
+        font-size: 14px;
+    }
+}
+
+.table__block {
+    padding: 2px;
+    margin-top: -2px;
+    background-color: #acacac;
+}
+
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+}
+
+.table__item {
+    display: grid;
+    min-height: 60px;
+    background-color: $white;
+    align-content: center;
+
+    @include breakpoint ($desktop-bp-992) {
+        min-height: 45px;
+    } 
+}
+
+.table__item-text {
+    color: $textcolor;
+    line-height: 1.66;
+    padding-left: 20px;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 14px;
+    }
+}
+
+.table__item:not(.table__item-text) {
+    align-content: center ;
+    justify-content: center;
+ }
+
+ .slider__tariffs {
+    display: none;
+    padding-top: 40px;
+    
+    @include breakpoint ($mobile-bp-660) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ }
+
+/* tariffs mobile */
+.tariffs__mobile {
+    display: none;
+
+    @include breakpoint ($mobile-bp-660) {
+        display: block;
+    }
+}
+
+.tariffs__mobile-section {
+    width: 100%;
+}
+
+.tariffs__mobile__name {
+    background-color: #283645;
+    color: $white;
+    text-align: center;
+    padding: 21px 0;
+
+    position: relative;
+}
+
+.tariffs__mobile__name-title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.tariffs__mobile__name-price {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.tariffs__mobile__table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+    background-color: #ffffff;
+    padding: 0 22px;
+    border: 2px solid #acacac;
+    border-top: none;
+}
+
+.mobile__table__item {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #283645;
+}

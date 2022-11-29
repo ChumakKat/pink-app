@@ -1,0 +1,76 @@
+/* TIMER */
+
+.timer {
+    background-color: $grayfon;
+
+    @include breakpoint ($desktop-bp-992) {
+       padding-top: 54px;
+       background-color: $white;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        display: none;
+    }
+}
+
+.timer__section {
+    display: flex;
+    align-items: center;
+    padding-bottom: 65px;
+}
+
+.timer__img {
+    margin-right: 70px;
+
+    @include breakpoint ($desktop-bp-992) {
+        width: 238px;
+     }
+}
+
+.timer__title {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 28px;
+
+    & br {
+        display: none;
+    }
+
+    @include breakpoint ($desktop-bp-992) {
+        margin-bottom: 24px;
+        line-height: 1.2;
+     }
+
+    @include breakpoint ($tablets-bp-768) {
+        & br {
+            display: block;
+        }
+     }
+}
+
+.timer__text {
+    line-height: 1.66;
+    margin-bottom: 45px;
+    color: $textcolor;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 2;
+    }
+}
+
+.timer__link {
+    color: $pink;
+    transition: text-decoration .3s linear, color .3s linear;
+
+    &:hover {
+        text-decoration: underline;
+        color: $textcolor;
+    }
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 14px;
+    }
+}

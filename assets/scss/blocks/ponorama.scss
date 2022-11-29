@@ -1,0 +1,96 @@
+/* PONORAMA */
+.ponorama {
+    background-image: url(../images/panorama-desktop.png);
+    background-size: cover;
+    background-position:  center;
+    height: 506px;
+    padding-top: 55px;
+
+    @include breakpoint ($mobile-bp-660) {
+        height: 400px;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        height: 250px;
+        padding-top: 0;
+    }
+}
+
+.ponorama-day {
+    width: 140px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    background-color: $pink;
+    color: $white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ponorama__info {
+    background: $photofon;
+    padding: 30px;
+}
+
+.ponorama__info-autor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    .autor {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.autor__name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.autor__time {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.info-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ponorama__info-like {
+    display: flex;
+
+    .like__amount {
+        color: $pink;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: 17px;
+    }
+
+    &_desk {
+        @include breakpoint ($mobile-bp-576){
+            display: none;
+        }
+    }
+
+    &_mobile {
+        display: none;
+
+        @include breakpoint ($mobile-bp-576){
+            display: flex;
+
+            .like__amount{
+                order: 1;
+                margin-right: 0;
+                margin-left: 18px;
+            }
+        }
+    }
+}

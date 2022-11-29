@@ -1,0 +1,290 @@
+/* Contest FIO-APP*/
+.fioapp {
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    
+    @include breakpoint ($tablets-bp-768){
+        display: block;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        margin-bottom: 45px;
+    }
+}
+
+/* FIO */
+.fio {
+    width: 50%;
+    margin-right: 35px;
+
+    padding-left: 20px;
+
+    @include breakpoint ($desktop-bp-992){
+        margin-right: 25px;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 65px;
+        padding-right: 20px;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        margin-bottom: 45px;
+    }
+}
+
+.fio__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 54px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        display: block;
+        margin-bottom: 25px;
+    }
+}
+
+.fio__name {
+    display: inline-block;
+    margin-right: 20px;
+
+    @include breakpoint ($mobile-bp-480){
+        padding-left: 22px;
+        margin: 0 0 10px 0;
+    }
+}
+
+.fio__input {
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: $black;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: none;
+    border: 2px solid $graycontest;
+    border-radius: 3px;
+
+    &::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        color: $textcolor;
+        font-size: 18px;
+    }
+
+    &:hover {
+        border: 2px solid $textcolor;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        border: 2px solid $pink;
+    }
+}
+
+/* APP */
+.app__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 35px;
+    position: relative;
+    padding-right: 20px;
+
+    @include breakpoint ($desktop-bp-992){
+        margin-left: 25px;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        width: 100%;
+        margin-left: 0;
+        padding-left: 20px;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        background-color: $graymobile;
+        padding-top: 40px;
+    }
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    border: 2px solid $graycontest;
+    padding: 52px 0 52px 72px;  
+
+    @include breakpoint ($desktop-bp-992){
+        padding-left: 52px;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        padding-left: 60px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        padding-left: 30px;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        padding: 40px 0; 
+        border: none;
+    }
+}
+
+.app__title {
+    background-color: $white;
+    padding: 0 25px;
+
+    position: absolute;
+    top: -10px;
+
+    width: max-content;
+
+    @include breakpoint ($mobile-bp-480){
+       position: relative;
+       background-color: inherit;
+       width:100%;
+       text-align: center;
+    }
+}
+
+.app__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.app__circle {
+    width: 37px;
+    height: 37px;
+    border: 2px solid $graycontest;
+    border-radius: 50%;
+    margin-right: 22px;
+
+    position: relative;
+
+    &:hover {
+        border: 2px solid $textcolor;
+    }
+
+    &:active {
+        border: 2px solid $pink;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        background: $white;
+    }
+}
+
+.app__pain {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $pink;
+
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+/* RADIO */
+
+.app__radio {
+    position: relative;
+}
+
+.radio__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.radio__label {
+    padding-left: 60px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 37px;
+        height: 37px;
+
+        background-color: #fff;
+        border: 2px solid $graycontest; 
+        border-radius: 50%;
+   
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+
+        transition: border .2s linear;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: $pink;
+        border-radius: 50%;
+        opacity: 0;
+
+        position: absolute;
+        top: 6px;
+        left: 11px;
+        z-index: 2;
+        transition: opacity .2s linear;
+    }
+
+    &:hover {
+        &:before {
+            border: 2px solid $textcolor; 
+        }
+    }
+
+    &:active {
+        &:before {
+            border: 2px solid $pink; 
+        }
+    }
+}
+
+.radio__input:checked + .radio__label:after {
+    opacity: 1;
+}
+ 
+/* fio-app global style */
+
+.pink-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $pink;
+}
+
+.input__red {
+    border: 3px solid red;
+}

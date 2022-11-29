@@ -1,0 +1,80 @@
+/* TITLE PHOTO */
+
+.title__photo {
+    padding: 95px 0;
+
+    @include breakpoint ($mobile-bp-660) {
+        padding: 75px 0;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        padding: 55px 0;
+    }
+}
+
+.title-last {
+    padding: 65px 0 70px;
+
+    @include breakpoint ($mobile-bp-576) {
+        padding: 28px 0 51px;
+    }
+}
+
+.title__text {
+    max-width: 572px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: $textcolor;
+    margin: 0 auto;
+
+    &-contest {
+        max-width: 756px;
+
+        @include breakpoint ($desktop-bp-992) {
+            max-width: 490px;
+        }
+    }
+
+    br {
+        display: none;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        font-size: 16px;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        font-size: 14px;
+        line-height: 2;
+        padding: 0 5px;
+        
+        br {
+            display: block;
+        }
+
+        span {
+            display: none;
+        }
+    }     
+}
+
+.title__text-last {
+    max-width: 442px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: $textcolor;
+    margin: 0 auto;
+
+    @include breakpoint ($mobile-bp-660) {
+        font-size: 16px;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        font-size: 14px;
+        line-height: 2;   
+    }
+}

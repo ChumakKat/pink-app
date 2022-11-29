@@ -1,0 +1,14 @@
+/* CONTAINER */
+.container {
+    width:100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__progress {
+        @include breakpoint ($mobile-bp-480){
+            background-color: $graymobile;
+        }
+    }
+}

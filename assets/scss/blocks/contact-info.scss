@@ -1,0 +1,161 @@
+/* CONTACT contest*/
+.contact__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    border: 2px solid $graycontest;
+    padding: 40px 60px 23px 60px;
+    margin-bottom: 65px;
+    width: 100%;
+
+    @include breakpoint ($desktop-bp-992){
+        padding: 45px 45px 23px 45px;
+    }
+
+    @include breakpoint ($tablets-bp-768) {
+        padding-bottom: 38px;
+        padding: 45px 60px 23px 60px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        padding: 45px 30px 23px 30px;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        border: none;
+        padding: 0;
+        margin-bottom: 0;
+        padding-bottom: 45px;
+    }
+}
+
+.contact__title {
+    background-color: $white;
+    padding: 0 25px;
+    position: absolute;
+    top: -10px;
+
+    @include breakpoint ($mobile-bp-480){
+       display: none;
+    }
+}
+
+.contact__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @include breakpoint ($tablets-bp-768){
+        display: block;
+    }  
+}
+
+.contact__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &-phone {
+        padding-right: 35px;
+
+        @include breakpoint ($desktop-bp-992){
+            padding-right: 25px;
+        }
+
+        @include breakpoint ($tablets-bp-768) {
+            margin-bottom: 38px;
+        }
+    }
+
+    &-address {
+        padding-left: 35px;
+
+        @include breakpoint ($desktop-bp-992){
+            padding-left: 25px;
+        }
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        width: 100%;
+        padding: 0;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        margin-bottom: 0;
+     }
+}
+
+.contact__input-block {
+    display: flex;
+}
+
+.contact__input {
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: $black;
+    font-size: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border: 2px solid $graycontest;
+    border-radius: 3px;
+
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size:contain;
+
+    &::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        color: $textcolor;
+        font-size: 18px;
+    }
+    
+    &:hover {
+        border: 2px solid $textcolor;
+    }
+    
+    &:focus,
+    &:active {
+        outline: none;
+        border: 2px solid $pink;
+    } 
+    
+    &-phone {
+        background-image: url("../images/group1.svg"); 
+
+        @include breakpoint ($mobile-bp-480) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-mail {
+        background-image: url("../images/group2.svg");
+
+        @include breakpoint ($mobile-bp-480) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        order: 1;
+     }
+}
+
+.contact__name {
+    @include breakpoint ($mobile-bp-480){
+        padding-left: 22px;
+        margin: 0 0 10px 0;
+    }
+}
+
+// global style
+.input__red {
+    border: 3px solid red;
+}
+
+

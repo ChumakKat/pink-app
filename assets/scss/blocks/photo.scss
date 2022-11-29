@@ -1,0 +1,85 @@
+/* PHOTO */
+.photo {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 54px 20px;
+    grid-auto-rows: 1fr;
+
+    @include breakpoint ($tablets-bp-768){
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 20px; 
+    }
+}
+
+.photo__item {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr / 1fr;
+}
+
+.photo__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $photofon;
+    padding: 30px;
+
+    .ponorama__info-like {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint ($mobile-bp-576){
+            justify-content: flex-start;
+
+            .like__amount{
+                order: 1;
+                margin-right: 0;
+                margin-left: 18px;
+            }
+        }
+    }
+}
+
+.photo__back {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint ($tablets-bp-768){
+        height: 300px; 
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        height: 280px; 
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        height: 230px; 
+    }
+
+    @include breakpoint ($mobile-bp-320){
+        height: 180px; 
+    }
+}
+
+.photo__autor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.info-text {
+    @include breakpoint ($mobile-bp-576){
+        margin-bottom: 23px;
+    }
+}
+
+.info-text__photo {
+    margin-bottom: 18px;
+}

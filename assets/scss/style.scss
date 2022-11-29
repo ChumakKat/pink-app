@@ -1,0 +1,65 @@
+@import "vars";
+@import "mixins";
+
+
+/* GLOBAL STYLE*/
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p, span {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+/* Vendor */
+@import "vendor/slick";
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/nav";
+@import "blocks/main";
+@import "blocks/offer";
+@import "blocks/timer";
+@import "blocks/reviews";
+@import "blocks/tariffs";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/info-mobile";
+@import "blocks/title-photo";
+@import "blocks/ponorama";
+@import "blocks/photo";
+@import "blocks/editing";
+@import "blocks/fio-app";
+@import "blocks/contact-info";
+@import "blocks/progress";
+@import "blocks/emotions";
+@import "blocks/form-footer";
+@import "blocks/modal";

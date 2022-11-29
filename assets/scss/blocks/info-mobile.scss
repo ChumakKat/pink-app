@@ -1,0 +1,15 @@
+/* INFO MOBILE */
+.info__mobile {
+    display: none;
+    background-color: #1D2631;
+    padding: 28px 0 37px;
+    text-align: center;
+
+    @include breakpoint ($mobile-bp-660) {
+    display: block;
+     
+        & p {
+            margin: 0 auto;
+        }
+    }
+}

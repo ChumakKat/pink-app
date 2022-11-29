@@ -1,0 +1,180 @@
+/* MAIN */
+.main {
+    background-image: url("../images/bg-back-desktop@1x.jpg");
+    background-size: cover;
+    background-position:  center;
+
+    padding-top: 109px;
+    transition: margin-top .9s linear;
+
+    @include breakpoint ($tablets-bp-768) {
+        background-image: url("../images/bg-back-tablet@1x.jpg");
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        padding-top: 69px;
+        background-image: url("../images/bg-back-mobile@1x.jpg");
+    }
+
+    &.show {
+        margin-top: 252px; 
+    }
+}
+
+.main__section {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include breakpoint ($mobile-bp-660) {
+        display: block;
+    }
+}
+
+.main__title-photo {
+   font-size: 50px;
+   font-weight: 300;
+   color: $white;
+   text-align: center;
+   margin: 0 auto;
+   padding: 75px 0 100px;
+
+   @include breakpoint ($mobile-bp-660) {
+        font-size: 35px;
+        padding: 50px 0 90px;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        font-size: 24px;
+        padding: 36px 0 80px;
+        }
+}
+
+.maim__mobile-none {
+    @include breakpoint ($mobile-bp-660) {
+        display: none;
+    }
+}
+
+.main__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    @include breakpoint ($mobile-bp-660) {
+       position: sticky;
+       display: block;
+    }
+}
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+
+    @include breakpoint ($tablets-bp-768) {
+        padding-top: 90px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        position: sticky;
+        padding-top: 28px;
+     }
+}
+
+.main__title {
+   font-size: 50px;
+   font-weight: 300;
+   color: $white;
+   max-width: 300px;
+   text-align: center;
+   margin: 0 0 45px;
+   padding: 0;
+
+   @include breakpoint ($tablets-bp-768) {
+        font-size: 40px;
+        max-width: 240px;
+        margin: 0 0 35px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        font-size: 24px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    color: $white;
+    width: 300px;
+    padding: 18px 0;
+    font-size: 21px;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    background: none;
+    border: 3px solid $white;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: background-color .5s linear, color .5s linear;
+   
+    &:hover {
+        background-color: $white;
+        color: $pink;
+    } 
+
+    @include breakpoint ($tablets-bp-768) {
+        font-size: 18px;
+        }
+
+    @include breakpoint ($tablets-bp-768) {
+        width: 280px;
+        }   
+}
+
+.main__icon {
+  margin: 65px 0 55px;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint ($tablets-bp-768) {
+    margin: 43px 0 35px;
+    }
+}
+
+.main__link {
+    transition: transform .2s linear;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.main__link-mr {
+    margin: 0 35px;
+}
+
+.main__text {
+    width: 300px;
+    color: $white;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1; 
+
+    @include breakpoint ($tablets-bp-768) {
+        margin-bottom: 110px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}

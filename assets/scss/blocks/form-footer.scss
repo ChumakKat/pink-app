@@ -1,0 +1,64 @@
+/* FORM FOOTER*/
+.form__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint ($mobile-bp-576){
+        display: block;
+        text-align: center;
+    }
+}
+
+.form__btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 58px;
+    background-color: $green;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    transition: background-color .2s linear ;
+
+    &:hover {
+        background-color: $greenhover;
+    }
+
+    &:active {
+        color: rgba($white, .3);
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        margin-bottom: 45px;
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+.form__note {
+
+    &-text {
+        font-size: 14px;
+        text-transform: uppercase;
+
+        &_asterisk {
+            color: $pink;
+        }
+
+        &_non {
+            @include breakpoint ($tablets-bp-768) {
+                display: none;
+            }
+        }
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        padding-bottom: 25px;
+    }
+}

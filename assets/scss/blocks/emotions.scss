@@ -1,0 +1,87 @@
+/* EMOTIONS*/
+
+.emotions__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint ($mobile-bp-480) {
+       padding-top: 42px;
+    }
+}
+
+.emotions {
+    border: 2px solid $graycontest;
+    padding: 45px 60px;
+    margin-bottom: 65px;
+    width: 100%;
+
+    @include breakpoint ($desktop-bp-992){
+        padding: 45px 45px;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        padding: 45px 60px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        margin-bottom: 50px;
+        padding: 45px 30px;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        padding: 22px 0 45px;
+        border: none;
+        margin-bottom: 0;
+    }
+}
+
+.emotions__title {
+    background-color: $white;
+    padding: 0 25px;
+    position: absolute;
+    top: -10px;
+
+    @include breakpoint ($mobile-bp-480){
+        position: relative;
+        top: 0;
+        background-color: inherit;
+        width:100%;
+        text-align: center;
+     }
+}
+
+.emotions__text {
+    display: block;
+    width: 100%;
+    min-height: 124px;
+    font-family: 'Open Sans', sans-serif;
+    color: $black;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: none;
+    border: 2px solid $graycontest;
+    border-radius: 3px;
+    resize: none;
+
+    @include breakpoint ($tablets-bp-768){
+        min-height: 190px;
+    }
+
+    &::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        color: $textcolor;
+        font-size: 18px;
+    }
+    
+    &:hover {
+        border: 2px solid $textcolor;
+    }
+    
+    &:focus,
+    &:active {
+        outline: none;
+        border: 2px solid $pink;
+    } 
+}

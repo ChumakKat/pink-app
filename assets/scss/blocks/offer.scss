@@ -1,0 +1,170 @@
+/* OFFER */ 
+
+.offer__title {
+    padding: 75px 0 56px;
+    text-align: center;
+
+    @include breakpoint ($tablets-bp-768) {
+        padding: 60px 0 30px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        padding: 45px 0 30px;
+    }
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+
+    font-size: 50px;
+    font-weight: 300;
+    color: $textcolor;
+
+    @include breakpoint ($tablets-bp-768) {
+        font-size: 40px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        font-size: 24px;
+
+        &__mobile {
+            padding-top: 30px;
+        }
+    }
+}
+
+.offer {
+    position: relative;
+    background-color: $grayfon;
+}
+
+.offer:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+    border-top: 100px solid $white;
+    border-right: 100vw solid transparent;
+    z-index: 0;
+
+    @include breakpoint ($desktop-bp-992) {
+        border-top: 50px solid $white;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        border-top: 35px solid $white;
+    }
+}
+
+.offer__section {
+    position: relative;
+    z-index: 1000;
+
+    @include breakpoint ($desktop-bp-992) {
+        display: flex;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+       flex-direction: column;
+       align-items: center;
+       overflow: hidden;
+    }
+}
+
+.offer__photo {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint ($desktop-bp-992) {
+        display: none;
+    }
+}
+
+.offer__img {
+    max-width: 33%;  
+}
+
+.offer__photo-tablet {
+    display: none;
+    
+    @include breakpoint ($desktop-bp-992) {
+        display: flex;
+        margin-right: 45px; 
+        align-items: flex-end;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        order: 1;
+        margin-right: 0; 
+        transform: translateY(40px);
+     }
+}
+
+.offer__img-tablet {
+    display: flex;
+}
+
+
+.offer_item {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 60px 0 75px;
+
+    @include breakpoint ($desktop-bp-992) {
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        padding: 80px 0 45px;
+    } 
+
+    @include breakpoint ($mobile-bp-660) {
+        text-align: center;
+        padding: 85px 0 5px;
+     }
+}
+
+.offer__info{
+    max-width: 33%;
+    padding: 0 20px;
+
+    @include breakpoint ($desktop-bp-992) {
+        max-width: 100%;
+        padding: 0;     
+    } 
+
+    &-title {
+        font-size: 30px;
+        line-height: 1;
+        font-weight: bold;
+        margin-bottom: 28px;
+
+        @include breakpoint ($desktop-bp-992) {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &-text {
+        font-size: 18px;
+        line-height: 1.66;
+        max-width: 249px;
+        margin: 0 auto;
+        color: $textcolor;
+       
+        @include breakpoint ($desktop-bp-992) {
+            font-size: 14px;
+            margin-bottom: 40px;
+            max-width: 100%;
+
+            &-m0 {
+                margin-bottom: 0;
+            }
+        } 
+    }
+}

@@ -1,0 +1,143 @@
+/* PROGRESS */
+.progress__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint ($mobile-bp-480){
+        padding-top: 45px;
+    }
+}
+
+.progress {
+    border: 2px solid $graycontest;
+    padding: 55px 60px;
+    margin-bottom: 65px;
+    width: 100%;
+
+    @include breakpoint ($desktop-bp-992){
+        padding: 55px 45px;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        padding: 55px 60px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        padding: 55px 30px;
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        border: none;
+        padding: 45px 0;
+        margin-bottom: 0;
+    }
+}
+
+.progress__title {
+    background-color: $white;
+    padding: 0 25px;
+    position: absolute;
+    top: -10px;
+
+    @include breakpoint ($mobile-bp-480){
+        position: relative;
+        top: 0;
+        background-color: inherit;
+        width:100%;
+        text-align: center;
+     }
+}
+
+.progress__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 43px;
+    justify-content: space-between;
+
+    @include breakpoint ($desktop-bp-992){
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+
+    @include breakpoint ($tablets-bp-768){
+        grid-template-columns: repeat(1, auto);
+        justify-content: start;
+    }
+}
+
+.progress__item {
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    
+}
+
+/* CHECKBOX */
+
+.progress__mark-chb {
+    position: relative;
+}
+
+.checkbox__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.progress__name-label {
+    padding-left: 60px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        border: 2px solid $graycontest; 
+        border-radius: 3px;
+   
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+
+        transition: border .2s linear;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 16px;
+
+        background: url(../images/tick.svg) no-repeat;
+        background-size: 22px 16px;
+        opacity: 0;
+
+        position: absolute;
+        top: 4px;
+        left: 7px;
+        z-index: 2;
+
+        transition: opacity .2s linear;
+    }
+
+    &:hover {
+        &:before {
+            border: 2px solid $textcolor; 
+        }
+    }
+
+    &:active {
+        &:before {
+            border: 2px solid $pink; 
+        }
+    }
+}
+
+.checkbox__input:checked + .progress__name-label:after {
+    opacity: 1;
+}

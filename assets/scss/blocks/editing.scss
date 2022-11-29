@@ -1,0 +1,324 @@
+/* EDITING */
+.editing {
+    @include breakpoint ($desktop-bp-992){
+        background-color: $photofon;
+    }
+}
+
+.editing__section {
+    background-color: $photofon;
+    padding: 56px 51px 56px 80px;
+    display: flex;
+
+    @include breakpoint ($desktop-bp-992){
+        padding: 56px 51px;
+    }
+
+    @include breakpoint (825px){
+        padding: 56px 0;
+    }
+
+    @include breakpoint ($mobile-bp-660){
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    @include breakpoint ($mobile-bp-576){
+        padding-top: 40px; 
+    }
+
+    @include breakpoint ($mobile-bp-480){
+        padding-top: 20px; 
+    }
+}
+
+.editing__photo {
+    width: 50%;
+
+    @include breakpoint ($mobile-bp-660){
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.editing__img {
+    @include breakpoint ($mobile-bp-480){
+        width: 280px;
+    }
+}
+
+.editing__block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint ($tablets-bp-768){
+        padding-left: 40px;
+    }
+
+    @include breakpoint ($mobile-bp-660){
+        width: 100%;
+        padding-left: 0;
+    } 
+}
+
+/* EDITING Options*/
+.editing__options {
+    @include breakpoint ($mobile-bp-660){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 240px;
+        margin: 0 auto;
+    } 
+
+    @include breakpoint ($mobile-bp-576) {
+        width: 200px;
+    }
+}
+
+.options__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grayfon;
+    padding: 10px 0;
+
+    @include breakpoint ($tablets-bp-768){
+        padding: 23px 0;
+    }
+   
+    @include breakpoint ($mobile-bp-660){
+        border-bottom: none;
+    } 
+
+    &:first-child {
+        padding: 0 0 10px 0;
+
+        @include breakpoint ($tablets-bp-768){
+            padding: 0 0 23px 0;
+        }
+
+        @include breakpoint ($mobile-bp-660){
+            padding: 0;
+        }
+    }
+}
+.options__item-block {
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+
+   @include breakpoint ($mobile-bp-660){
+    margin-right: 0;
+    } 
+}
+
+.options__img {
+    width: 44px;
+    height: 44px;
+    fill: $pink;
+   
+    @include breakpoint ($tablets-bp-768){
+        margin-right: 30px;
+        width: 22px;
+        height: 22px;
+    }
+    
+    @include breakpoint ($mobile-bp-660){
+        margin-right: 0;
+        width: 44px;
+        height: 44px;
+        fill: $textcolor;
+        opacity: .3;
+
+        &:hover,
+        &:active{
+            fill: $pink;
+            opacity: 1;
+        }
+    } 
+
+    &-fill {
+        width: 48px;
+        height: 43px;
+
+        @include breakpoint ($tablets-bp-768){
+            width: 24px;
+            height: 22px;
+        } 
+
+        @include breakpoint ($mobile-bp-660){
+            width: 48px;
+            height: 43px;
+        } 
+    }
+
+    &-contrast {
+        width: 32px;
+        height: 32px;
+
+        @include breakpoint ($tablets-bp-768){
+            width: 16px;
+            height: 16px;
+        }
+
+        @include breakpoint ($mobile-bp-660){
+            width: 32px;
+            height: 32px;
+        } 
+    }
+}
+
+.options__scale {
+    position: relative;
+    padding-right: 20px;
+
+    @include breakpoint ($mobile-bp-660){
+        display: none;
+    }
+}
+
+.options__scale-mobile {
+    display: none;
+    
+    @include breakpoint ($mobile-bp-660){
+        display: block;
+        padding: 15px 0 35px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+.options__scale-line_mobile {
+    width: 240px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: $burgercolor; 
+}
+
+.options__scale-circle_mobile {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid $pink;
+    background-color: $white;
+   
+    position: absolute;
+    top: 9px;
+    left: 20%;
+    z-index: 2;
+
+    &:active {
+        background-color: $pink;
+    }
+}
+
+.options__scale-line {
+    width: 288px;
+    height: 2px;
+    background-color: $burgercolor;
+
+    @include breakpoint ($tablets-bp-768){
+        width: 202px;
+    }
+}
+
+.options__scale-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid $pink;
+    background-color: $white;
+
+    position: absolute;
+    top: -6px;
+    left: 20%;
+    z-index: 2;
+
+    &__fill {
+        left: 80%;
+    }
+
+    &__contrast {
+        left: 50%;
+    }
+
+    &:active {
+        background-color: $pink;
+    }
+}
+
+/* Editing Button */
+
+.options__button {
+    display: flex;
+    justify-content: space-between; 
+
+    @include breakpoint ($desktop-bp-992){
+        display: block;
+    }
+
+    @include breakpoint ($mobile-bp-660){
+        padding-top: 40px;
+        border-top: 1px solid $grayfon;
+        text-align: center;
+    }
+}
+
+.options__btn {
+    background: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    width: 183px;
+    height: 55px;
+    border-radius: 50px;
+
+    transition: color .3s linear,  background-color .3s linear,
+    border .3s linear;
+
+    @include breakpoint ($desktop-bp-992){
+        width: 100%;
+    }
+
+    @include breakpoint ($mobile-bp-660){
+        max-width: 350px;
+    }
+
+    &-post {
+        color: $pink;
+        border: 3px solid $pink;
+
+        @include breakpoint ($desktop-bp-992){
+            margin-bottom: 23px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $pink;
+        }
+
+        &:active {
+            color: rgba($white, .3)
+        }
+    }
+
+    &-cancel {
+        color: rgba($textcolor, .1);
+        border: 3px solid rgba($textcolor, .1);
+
+        &:hover {
+            color: rgba($textcolor, .3);
+            border: 3px solid rgba($textcolor, .3);
+        }
+
+        &:active {
+            color: rgba($white, .3);
+            background-color: rgba($textcolor, .3);
+            border: 3px solid rgba($textcolor, 0);
+        }
+    }
+}

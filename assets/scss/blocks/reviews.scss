@@ -1,0 +1,130 @@
+/* REVIEWS */
+.reviews {
+    padding: 72px 0 36px;
+    text-align: center;
+   
+    @include breakpoint ($desktop-bp-992) {
+        padding: 30px 0 18px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.reviews__img {
+    margin-bottom: 56px;
+
+    @include breakpoint ($desktop-bp-992) {
+        display: none;
+    }
+}
+
+.reviews__block {
+    display: flex;
+}
+
+.reviews__item-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__item {
+    .revievs__arrow {
+        @include breakpoint ($desktop-bp-992) {
+            display: none;
+        }
+    }
+}
+
+.reviews__text {
+    position: relative;
+    margin: 0 auto;
+    max-width: 688px;
+    height: 90px;
+    line-height: 1.66;
+    color: $textcolor;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @include breakpoint ($mobile-bp-660) {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        margin-bottom: 35px;
+    }
+}
+
+.reviews__autor {
+    margin: 46px 0 8px;
+    font-size: 24px;
+    font-weight: bold;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 20px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        order: -1;
+        font-size: 18px;
+        margin: 15px 0 20px;
+    }
+} 
+
+.revievw__autor-info {
+    color: $textcolor;
+
+    @include breakpoint ($desktop-bp-992) {
+        font-size: 14px;
+        padding-bottom: 40px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        display: none;
+    }
+}
+
+.rewiews__btn {
+    border: none;
+    background: none;
+}
+
+.slider {
+    display: none;
+    
+    @include breakpoint ($desktop-bp-992) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.slider__item {
+    background-color: $grayfon;
+    width: 6px;
+    height: 6px;
+    margin-left: 10px ;
+    margin-right: 10px ;
+    border-radius: 50px;
+
+    &-active {
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+        border: 3px solid $textcolor;
+    }
+
+    &-tariffs {
+        background-color: #7a7a7a;
+
+        &-active {
+            background-color: $grayfon; 
+        }
+    }
+}

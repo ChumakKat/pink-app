@@ -1,0 +1,174 @@
+/* CONTACTS Main page */
+.contacts__section {
+    padding-top: 75px;
+    text-align: center;
+
+    @include breakpoint ($desktop-bp-992) {
+        padding-top: 55px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        padding: 45px 0 20px;
+    }
+}
+
+.contacts__block {
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint ($desktop-bp-992) {
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        flex-direction: column;
+    }
+}
+
+.contacts__item {
+    width: 30%;
+    margin-top: 60px;
+
+    @include breakpoint ($tablets-bp-768) {
+        width: 50%;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        width: 100%;
+        margin-top: 27px;
+    }
+
+    &-title {
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: $textcolor;
+        
+        @include breakpoint ($tablets-bp-768) {
+            margin-bottom: 15px;
+        }
+
+        @include breakpoint ($mobile-bp-660) {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+
+    &-text {
+        font-size: 24px;
+        font-weight: 300;
+        color: $pink;
+        transition: text-decoration .3s linear, color .3s linear;
+
+        &-link {
+            &:hover {
+                text-decoration: underline;
+                color: $textcolor;
+            }
+        }
+    }
+}
+
+.contacts__item-num{
+    @include breakpoint ($tablets-bp-768) {
+        order: -1;
+    }
+}
+
+
+/* Contacts MAP*/
+.map {
+    position: relative; 
+}
+
+.map:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+    border-top: 123px solid $white;
+    border-right: 50vw solid transparent;
+    z-index: 0;
+
+    @include breakpoint ($tablets-bp-768) {
+        border-top: 66px solid $white;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        border-top: 33px solid $white;
+    }
+}
+
+.map:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+   
+    border-top: 123px solid $white;
+    border-left: 50vw solid transparent;
+    z-index: 0;
+
+    @include breakpoint ($tablets-bp-768) {
+        border-top: 66px solid $white;
+    }
+
+    @include breakpoint ($mobile-bp-480) {
+        border-top: 33px solid $white;
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+
+.circle__big {  
+    width: 36px;
+    height: 36px;
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;  
+}
+
+.circle__sm {
+    width: 16px;
+    height: 16px;
+    background-color: $pink;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 1;
+    top:10px;
+    left: 10px; 
+}
+
+.map {
+    background-image: url("../images/bg-map-desktop@1x.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 502px;
+
+    @include breakpoint ($tablets-bp-768) {
+        background-image: url("../images/bg-map-tablet@1x.jpg");
+        height: 374px;
+    }
+
+    @include breakpoint ($mobile-bp-660) {
+        max-height: 300px;
+     }
+
+    @include breakpoint ($mobile-bp-320) {
+        max-height: 250px;
+        background-image: url("../images/bg-map-mobile@1x.png");
+        background-position: bottom;
+        background-size:cover;
+     }
+}
